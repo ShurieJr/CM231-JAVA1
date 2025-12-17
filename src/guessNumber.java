@@ -8,15 +8,18 @@ public class guessNumber {
         System.out.println("Guess the number :");
         int guessNumber = input.nextInt();
 
-        while (guessNumber != randomNumber) {
-            if (guessNumber > randomNumber)
+        while (true) {
+            if (guessNumber == randomNumber){
+                System.out.println("Congratulations!");
+            break;
+            }
+           else if (guessNumber > randomNumber)
                 System.out.println("too high");
             else
                 System.out.println("too low");
             System.out.println("Try again! Guess the number :");
              guessNumber = input.nextInt();
         }
-        if (guessNumber == randomNumber)
-            System.out.println("Congratulations!");
+
     }
 }
